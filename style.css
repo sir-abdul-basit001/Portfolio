@@ -500,17 +500,18 @@ section {
 }
 .skill-card {
   background-color: var(--muted);
+
+  width: 30.5rem;
   padding: 28px;
   transition: transform 0.3s ease;
 }
 .skill-card:hover {
   transform: translateY(-8px);
 }
-.skill-card .icon {
-  font-size: 1.7rem;
-  margin-bottom: 14px;
-}
+
 .skill-card h4 {
+  font-size: 2rem;
+  color: var(--bg2);
   margin-bottom: 8px;
 }
 .skill-card p {
