@@ -750,3 +750,25 @@ footer {
   color: #4f9dff;
   transform: translateY(-3px);
 }
+
+/* popup msg  */
+.success-message {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #28a745;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+.success-message.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

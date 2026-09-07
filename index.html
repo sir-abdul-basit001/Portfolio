@@ -159,13 +159,15 @@
 
         <div class="skill-card glass-card reveal">
           <h4>React.js</h4>
-          <p>Responsiveness and Java-Scripts cores in React.js/p></p>
+          <p>
+            Building responsive and interactive user interfaces with React.js.
+          </p>
           <div class="bar"><span data-width="80"></span></div>
         </div>
 
         <div class="skill-card glass-card reveal">
           <h4>Express.js</h4>
-          <p>Routing and Api calling with Express.js to make secrured</p>
+          <p>Routing and Api calling with Express.js to make “secured”</p>
           <div class="bar"><span data-width="80"></span></div>
         </div>
 
@@ -237,7 +239,11 @@
               <span>HTML</span><span>CSS</span><span>Animation</span
               ><span>JS</span>
             </div>
-            <a href="#" class="project-link">View Project</a>
+            <a
+              href="https://stop-watch-seven-livid.vercel.app/"
+              class="project-link"
+              >View Project</a
+            >
           </div>
         </div>
 
@@ -247,7 +253,9 @@
           </div>
           <div class="project-body">
             <h4>Drag & Drop Project</h4>
-            <p>A project whereu can put your Tasks from one board to other</p>
+            <p>
+              A project where you can put your Tasks from one board to other
+            </p>
             <div class="tags">
               <span>HTML</span><span>CSS</span><span>Animation</span
               ><span>JS</span>
@@ -263,7 +271,8 @@
           <div class="project-body">
             <h4>Profile card</h4>
             <p>
-              An Intresting profile card Manager and you can customize your card
+              An interesting profile card Manager and you can customize your
+              card
             </p>
             <div class="tags">
               <span>HTML</span><span>CSS</span><span>Animation</span
@@ -278,8 +287,8 @@
             <img src="Images/project7.png" alt="" />
           </div>
           <div class="project-body">
-            <h4>Amazone- Clone</h4>
-            <p>A basic styling of Amazone to get command on Html and Css</p>
+            <h4>Amazon- Clone</h4>
+            <p>A basic styling of Amazon to get command on Html and Css</p>
             <div class="tags">
               <span>HTML</span><span>CSS</span><span>Animation</span
               ><span>JS</span>
@@ -299,9 +308,7 @@
               <span>HTML</span><span>CSS</span><span>Animation</span
               ><span>JS</span>
             </div>
-            <a
-              href="https://calculator-ebon-sigma-94.vercel.app/"
-              class="project-link"
+            <a href="https://calculator-knmtqx4r2-sir-abdul-basit.vercel.app/"
               >View Project</a
             >
           </div>
@@ -327,13 +334,17 @@
             <img src="Images/project12.png" alt="" />
           </div>
           <div class="project-body">
-            <h4>TikTacToe Game</h4>
-            <p>A Professional unlimited stages to play TikTacToe online</p>
+            <h4>Tik TacToe Game</h4>
+            <p>A Professional unlimited stages to play Tik Tac Toe online</p>
             <div class="tags">
               <span>HTML</span><span>CSS</span><span>Animation</span
               ><span>JS</span>
             </div>
-            <a href="#" class="project-link">View Project</a>
+            <a
+              href="https://calculator-7yeg-3q8bmqcrr-sir-abdul-basit.vercel.app/"
+              class="project-link"
+              >View Project</a
+            >
           </div>
         </div>
 
@@ -443,12 +454,21 @@
             My GitHub
           </a>
         </div>
-        <form onsubmit="return handleSubmit(event)">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea rows="4" placeholder="Your Message" required></textarea>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
           <button type="submit" class="btn btn-fill">Send Message</button>
         </form>
+        <div id="successMessage" class="success-message">
+          Message ready to send successfully!
+        </div>
       </div>
     </section>
 
