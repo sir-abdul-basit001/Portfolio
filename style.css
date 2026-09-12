@@ -261,6 +261,8 @@ nav ul li a:hover::after {
   box-shadow: 0 20px 50px rgba(91, 91, 245, 0.25);
   animation: floatY 5s ease-in-out infinite;
   transition: border-color 0.5s ease;
+  border: 2px solid rgb(232, 209, 181);
+  object-position: top;
 }
 .hero-badge {
   position: absolute;
@@ -449,7 +451,8 @@ section {
   align-items: center;
 }
 .about-photo {
-  aspect-ratio: 0.5/0.5;
+  /* aspect-ratio: 0.5/1.5; */
+  /* height: 80%; */
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(91, 91, 245, 0.15);
@@ -460,37 +463,95 @@ section {
   object-fit: cover;
 }
 .about-text p {
-  font-weight: bold;
+  font-weight: 450;
   font-size: 2rem;
-  color: var(--muted);
+  color: var(--text);
   margin-bottom: 18px;
 }
 .stats {
   display: flex;
-  gap: 36px;
-  margin-top: 28px;
   flex-wrap: wrap;
+  gap: 23px;
+  justify-content: center;
 }
 .stats div {
   padding-top: 5rem;
   text-align: center;
-  border: 2px solid;
+  border: 2px solid var(--accent);
   border-radius: var(--radius);
   height: 16rem;
   width: 14rem;
+
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+
+  position: relative;
+  overflow: hidden;
 }
+
+/* Animated glow layer */
+.stats div::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--accent);
+  border-radius: 50%;
+  top: -70px;
+  right: -70px;
+  opacity: 0;
+  filter: blur(35px);
+  transition: all 0.5s ease;
+}
+
+/* Hover effect */
 .stats div:hover {
-  scale: calc(1.1);
-  transition: transform 0.3s ease;
+  transform: translateY(-12px) scale(1.06);
+  border-color: var(--accent);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.18),
+    0 0 25px rgba(255, 193, 7, 0.25);
 }
+
+/* Glow animation */
+.stats div:hover::before {
+  opacity: 0.45;
+  width: 180px;
+  height: 180px;
+}
+
+/* Number animation */
 .stats h3 {
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--accent);
+
+  transition:
+    transform 0.4s ease,
+    text-shadow 0.4s ease;
 }
+
+.stats div:hover h3 {
+  transform: scale(1.15);
+  text-shadow: 0 0 15px var(--accent);
+}
+
+/* Text animation */
 .stats span {
   color: var(--muted);
   font-size: 1.55rem;
+
+  transition:
+    color 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.stats div:hover span {
+  color: var(--accent);
+  letter-spacing: 1px;
 }
 
 .skills-grid {
@@ -498,6 +559,7 @@ section {
   flex-wrap: wrap;
   gap: 28px;
 }
+
 .skill-card {
   background-color: var(--muted);
 
@@ -733,6 +795,7 @@ footer {
 
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 3.2rem;
   justify-content: center;
   margin: 1.5rem 0;
