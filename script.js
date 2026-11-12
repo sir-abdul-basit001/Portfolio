@@ -1,25 +1,3 @@
-// Theme toggle logic
-const root = document.documentElement
-const themeToggle = document.getElementById("themeToggle")
-const themeKnob = document.getElementById("themeKnob")
-
-function applyTheme(theme) {
-  root.setAttribute("data-theme", theme)
-  themeKnob.textContent = theme === "dark" ? "🌙" : "☀️"
-  localStorage.setItem("portfolio-theme", theme)
-}
-
-const savedTheme = localStorage.getItem("portfolio-theme")
-const systemPrefersDark = window.matchMedia(
-  "(prefers-color-scheme: dark)",
-).matches
-applyTheme(savedTheme || (systemPrefersDark ? "dark" : "light"))
-
-themeToggle.addEventListener("click", () => {
-  const current = root.getAttribute("data-theme")
-  applyTheme(current === "dark" ? "light" : "dark")
-})
-
 // Mobile nav toggle
 const burger = document.getElementById("burger")
 const navMenu = document.getElementById("navMenu")
